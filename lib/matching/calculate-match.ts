@@ -159,7 +159,11 @@ export function calculateMatch(candidate: CandidateProfile, job: NormalizedJob):
     if (applicable) earned += weight;
   }
 
-  const score = possible === 0 ? 0 : Math.round((earned / possible) * 100);
+  // Sem nenhuma tecnologia identificada na vaga, não há como avaliar
+  // compatibilidade técnica — não deixamos localização/modalidade/tipo de
+  // contratação, sozinhos, gerarem um score alto e enganoso.
+  const hasAnyTechnology = required.length + desired.length + differential.length > 0;
+  const score = !hasAnyTechnology || possible === 0 ? 0 : Math.round((earned / possible) * 100);
 
   const matchedSkills = [...matchedRequired, ...matchedDesired, ...matchedDifferential];
   const missingSkills = [...missingRequired, ...missingDesired, ...missingDifferential];

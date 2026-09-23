@@ -125,4 +125,24 @@ describe('calculateMatch', () => {
     expect(result.score).toBe(0);
     expect(result.explanation).toContain('não especifica');
   });
+
+  it('never reports a high score from location/modality/employment alone when the job has no technologies', () => {
+    // Regression test: a translation/support job with no tech requirements
+    // but matching remote modality + employment type must not show 100%.
+    const candidate = baseCandidate({
+      technologies: ['React', 'TypeScript'],
+      modality: ['remote'],
+      employmentTypes: ['pj'],
+    });
+    const job = baseJob({
+      technologies: [],
+      requirements: [],
+      remote: 'remote',
+      employmentType: 'pj',
+    });
+
+    const result = calculateMatch(candidate, job);
+
+    expect(result.score).toBe(0);
+  });
 });
