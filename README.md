@@ -1,14 +1,54 @@
-# JobHunter AI
+<div align="center">
 
-**Encontre vagas que combinam com você.**
+# 🎯 JobHunter AI
 
-JobHunter AI é uma plataforma que analisa seu currículo, entende suas preferências e mostra sua compatibilidade técnica com vagas de tecnologia reais — com transparência total sobre quais requisitos você atende e quais ainda faltam. O sistema nunca automatiza candidaturas: você sempre se candidata diretamente no site original da vaga.
+### Encontre vagas que combinam com você.
+
+Plataforma que analisa seu currículo, entende suas preferências e calcula sua **compatibilidade técnica real** com vagas de tecnologia — com transparência total sobre quais requisitos você atende e quais ainda faltam. Nunca automatiza candidaturas: você sempre se candidata direto no site original da vaga.
+
+[![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=black)](https://supabase.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
+
+<br/>
+
+**[🔗 Ver demo ao vivo](https://jobhunter-ai-gamma.vercel.app)** · [Arquitetura](#arquitetura) · [Como rodar localmente](#como-instalar) · [Algoritmo de match](#como-funciona-o-algoritmo-de-match)
+
+</div>
 
 > ⚠️ O percentual de compatibilidade mostrado é uma medida de **aderência aos requisitos identificados na vaga**, calculada por um algoritmo próprio (sem depender de IA paga). Ele **não é** uma previsão de chance de contratação.
 
-<!-- Screenshots: adicione aqui capturas de tela do /dashboard, /jobs e /jobs/[id] depois do primeiro deploy. -->
-![Dashboard (placeholder)](https://via.placeholder.com/960x540?text=Dashboard+JobHunter+AI)
-![Detalhes da vaga (placeholder)](https://via.placeholder.com/960x540?text=Detalhes+da+Vaga)
+<br/>
+
+<table>
+<tr>
+<td width="50%"><img src="docs/screenshots/landing.png" alt="Landing page" /></td>
+<td width="50%"><img src="docs/screenshots/dashboard.png" alt="Dashboard com distribuição de compatibilidade" /></td>
+</tr>
+<tr>
+<td align="center"><sub><b>Landing page</b></sub></td>
+<td align="center"><sub><b>Dashboard — vagas encontradas, compatibilidade e perfil</b></sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/jobs.png" alt="Listagem de vagas com filtros e compatibilidade" /></td>
+<td width="50%"><img src="docs/screenshots/job-detail.png" alt="Detalhes da vaga com requisitos atendidos e ausentes" /></td>
+</tr>
+<tr>
+<td align="center"><sub><b>Busca de vagas com filtros e score por vaga</b></sub></td>
+<td align="center"><sub><b>Detalhe da vaga — requisitos atendidos vs. ausentes</b></sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/resume.png" alt="Dados extraídos do currículo em PDF" /></td>
+<td width="50%"><img src="docs/screenshots/profile.png" alt="Formulário de perfil profissional" /></td>
+</tr>
+<tr>
+<td align="center"><sub><b>Extração automática de dados do currículo (PDF)</b></sub></td>
+<td align="center"><sub><b>Perfil profissional usado no cálculo de match</b></sub></td>
+</tr>
+</table>
 
 ## Sumário
 
